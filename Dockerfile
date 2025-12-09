@@ -8,8 +8,8 @@ WORKDIR /app
 # Copy package files
 COPY packages/server/package*.json ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies (use npm install since we're in a container)
+RUN npm install
 
 # Copy source code
 COPY packages/server/src ./src
@@ -30,7 +30,7 @@ RUN apk add --no-cache dumb-init
 COPY packages/server/package*.json ./
 
 # Install only production dependencies
-RUN npm ci --only=production
+RUN npm install --production
 
 # Copy built application from builder
 COPY --from=builder /app/dist ./dist
