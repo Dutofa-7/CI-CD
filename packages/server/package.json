@@ -6,9 +6,9 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "node --watch --loader ts-node/esm src/index.ts",
-    "test": "npm run build && node --test dist/**/*.test.js",
-    "test:watch": "npm run build && node --watch --test dist/**/*.test.js",
-    "test:coverage": "npm run build && node --test dist/**/*.test.js"
+    "test": "npm run build && node --test dist/todos.test.js",
+    "test:watch": "npm run build && node --watch --test dist/todos.test.js",
+    "test:coverage": "npm run build && node --test dist/todos.test.js"
   },
   "dependencies": {
     "@sentry/node": "^7.91.0",
