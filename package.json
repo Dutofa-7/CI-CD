@@ -1,0 +1,10 @@
+﻿{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Todo List Application with CI/CD Pipeline",
+  "private": true,
+  "scripts": {
+    "test": "cd packages/server && npm test",
+    "build": "cd packages/server && npm run build && cd ../client && npm run build"
+  }
+}
